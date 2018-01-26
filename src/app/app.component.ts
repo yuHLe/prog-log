@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material';
 
 @Component({
   selector: 'app-root',
