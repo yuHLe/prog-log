@@ -1,9 +1,50 @@
-mat-sidenav {
-  background-color: aliceblue;
-  padding: 1em;
-  font-size: 1.5em;
+
+.header-expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: indigo;
+    color: pink;
 }
 
-mat-toolbar {
-  background-color: purple;
+.container-expand {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 60px;
+    background: #2d2d2d;
+    color: aliceblue;
+}
+
+.footer-expand {
+    background: indigo;
+    color: pink;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.container-content {
+    padding: 25px;
+}
+
+.sidenav-content {
+    background: purple;
+    color: pink;
+    padding: 1em;
+    width: 200px;
+    overflow-wrap: break-word;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: -30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    cursor: pointer;
 }

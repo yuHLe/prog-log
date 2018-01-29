@@ -7,5 +7,9 @@ import { MatSidenavModule } from '@angular/material';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Prog Log';
+
+  log = () => {
+    console.log('test');
+  }
 }

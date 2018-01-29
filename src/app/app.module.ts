@@ -4,12 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { TopNavComponent } from './component/top-nav.component';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopNavComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
