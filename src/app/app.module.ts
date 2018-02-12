@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [ AppComponent ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

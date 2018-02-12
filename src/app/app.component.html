@@ -1,33 +1,40 @@
-<mat-toolbar class="header-expand">
-  Prog Log
+<mat-toolbar color="primary" [class.mat-elevation--z16]="true">
+
+  <button mat-button>
+    <img src="../assets/rix.png">
+    ProgLog
+  </button>
+  <button mat-button>
+    League
+  </button>
+  <button mat-button>
+    Players
+  </button>
 </mat-toolbar>
-<mat-sidenav-container class="container-expand">
-  <mat-sidenav mode="side" opened="true" class="sidenav-content">
+<mat-sidenav-container  color="primary">
+  <mat-sidenav #playerList color="primary" mode="side" opened="true">
     <ul>
       <!-- TODO: Navigation list based on existing routes -->
-      <li (click)="log()">Latest Month</li>
-      <li (click)="log()">Some Months in between</li>
-      <li (click)="log()">Some Months in between</li>
-      <li (click)="log()">Some Months in between</li>
-      <li (click)="log()">Earliest Month</li>
+      <li (click)="log()">Barry Rowe</li>
+      <li (click)="log()">Ermin Avdagic</li>
+      <li (click)="log()">Huy Le</li>
+      <li (click)="log()">Kavon Kowsari</li>
+      <li (click)="log()">Nick Cage</li>
+      <li (click)="log()">Geoff GetOff</li>
     </ul>
   </mat-sidenav>
-  <mat-sidenav-content class="container-content">
-    <div style="text-align:center">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-    </div>
-    <h2>Feb-2018</h2>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.</p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-    <p>This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  This is a basic site to practice Angular and AngularMaterial.  </p>
-  </mat-sidenav-content>
+  <mat-toolbar color="primary">
+    <button mat-button (click)="playerList.toggle()">
+      <mat-icon *ngIf="playerList.opened === true">keyboard_arrow_left</mat-icon>
+      <mat-icon *ngIf="playerList.opened === false">keyboard_arrow_right</mat-icon>
+      ProgLog
+    </button>
+  </mat-toolbar>
+  Some Main page stuff that display when you enter the app.
+  <!-- TODO: Some sort of router stuff -->
+  <!-- <angular-router></angular-router> -->
+  <!-- <main-page></main-page> -->
+  <mat-toolbar class="footer-expand">
+      &copy; 2018
+  </mat-toolbar>
 </mat-sidenav-container>
-<mat-toolbar class="footer-expand">
-  CopyRight 2018
-</mat-toolbar>
